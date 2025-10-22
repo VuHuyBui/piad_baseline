@@ -34,7 +34,7 @@ And then download the pre-trained EfficientNet-B4 weights from the [PAD GitHub r
 
 ```
 cd retrieval
-gdown https://drive.google.com/uc\?id\=16FOwaqQE0NGY-1EpfoNlU0cGlHjATV0V
+gdown https://drive.google.com/uc\?id\=1CVFXJf203tDLKDNF2lx1FYNxWPNrZyt-
 unzip model.zip
 ```
 
@@ -89,3 +89,4 @@ This work is built on many amazing research works:
 4. [Efficient LoFTR: Semi-Dense Local Feature Matching with Sparse-Like Speed](https://github.com/zju3dv/EfficientLoFTR)
 ## Project Page
 Our Project Page is [[here](https://kaichen-yang.github.io/piad)](https://kaichen-yang.github.io/piad).
+
