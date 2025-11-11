@@ -45,7 +45,7 @@ retrieval
  └ model 
 ```
 
-Additionally, you will need to download the pre-trained weights for EfficientLoFTR. You can find the download link in their GitHub repository. The required file is `eloftr_outdoor.ckpt`, which should be placed in the `./EfficientLoFTR/weights/` directory.
+Additionally, you will need to download the pre-trained weights for EfficientLoFTR. You can find the download link in their GitHub repository. (or from [here](https://drive.google.com/drive/folders/1DaIBmLR_mPWJvTz3nkT890ytvDZwVMwV?usp=sharing)) The required file is `eloftr_outdoor.ckpt`, which should be placed in the `./EfficientLoFTR/weights/` directory.
 
 the file format is like this:
 
@@ -89,4 +89,5 @@ This work is built on many amazing research works:
 4. [Efficient LoFTR: Semi-Dense Local Feature Matching with Sparse-Like Speed](https://github.com/zju3dv/EfficientLoFTR)
 ## Project Page
 Our Project Page is [[here](https://kaichen-yang.github.io/piad)](https://kaichen-yang.github.io/piad).
+
 
