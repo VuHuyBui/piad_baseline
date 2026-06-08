@@ -1,0 +1,13 @@
+ckpts/
+data/
+Rckpts/
+__pycache__/
+graphify-out/
+reflection/
+retrieval/model/
+*/__pycache__/
+EfficientLoFTR/weights/
+output/
+AD_result/
+
+*.npy

@@ -24,5 +24,4 @@ ipdb
 loguru==0.5.3
 pytorch-lightning==1.3.5
 torchmetrics==0.6.0
-submodules/diff-gaussian-rasterization
-submodules/simple-knn
+gsplat
