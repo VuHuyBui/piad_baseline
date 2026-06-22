@@ -22,6 +22,7 @@ import ipdb
 import datasets.MIP as mip
 import datasets.LEGO_3D as lego
 import datasets.MIPreal as real
+import datasets.Cube as cube
 
 def plot_fig(test_img, recon_imgs, test_imgs_R, recon_imgs_R, scores, gts, threshold, save_dir,class_name):
     num = len(scores)
@@ -283,6 +284,9 @@ elif class_name in lego.CLASS_NAMES:
 elif class_name in real.CLASS_NAMES:
     args.dataset_path = './data/Colmap'
     args.reflection_path = './reflection/Colmap'
+elif class_name in cube.CLASS_NAMES:
+    args.dataset_path = './data/Cube'
+    args.reflection_path = './reflection/Cube'
 dataset_path=args.dataset_path
 
 fig, ax = plt.subplots(1, 2, figsize=(20, 10))

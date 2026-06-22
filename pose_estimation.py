@@ -9,9 +9,11 @@ import shutil
 import datasets.MIP as mip
 import datasets.LEGO_3D as lego
 import datasets.MIPreal as real
+import datasets.Cube as cube
 from datasets.MIP import MIPDataset
 from datasets.LEGO_3D import LEGODataset
 from datasets.MIPreal import MIPrealDataset
+from datasets.Cube import CubeDataset
 from utils.camera_transf import camera_transf
 from utils.utils import to8b
 from utils.utils import (config_parser, img2mae, load_blender_ad, load_colmap_ad, pose_retrieval_efficientloftr)
@@ -351,7 +353,8 @@ def run():
         class_names = real.CLASS_NAMES if args.class_name == 'all' else [args.class_name]
         iter_num = 500
     else:
-        print("This dataset neither MIP nor MAD-Sim nor Colmap, we can't read it. But you can add it at here.")
+        class_names = cube.CLASS_NAMES if args.class_name == 'all' else [args.class_name]
+        iter_num = 500
 
     for class_name in class_names:
         # load the good imgs with their poses
@@ -377,7 +380,11 @@ def run():
                                     class_name=class_name,
                                     resize=400)
         else:
-            print("This dataset neither MIP nor MAD-Sim, we can't read it. But you can add it at here.")
+            dataset_info = CubeDataset(args=args,
+                                    class_name=class_name,
+                                    resize=400)
+        
+            # print("This dataset neither MIP nor MAD-Sim, we can't read it. But you can add it at here.")
 
         data_loader = DataLoader(dataset=dataset_info,
                                 batch_size=1,

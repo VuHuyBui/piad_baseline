@@ -319,7 +319,7 @@ def readMADInfo(path, white_background, eval, extension=".png"):
         print(f"Generating random point cloud ({num_pts})...")
 
         # We create random points inside the bounds of the synthetic Blender scenes
-        xyz = np.random.random((num_pts, 3)) * 4.0 - 2.0
+        xyz = np.random.random((num_pts, 3)) * 0.2 - 0.1
         shs = np.random.random((num_pts, 3)) / 255.0
         pcd = BasicPointCloud(points=xyz, colors=SH2RGB(shs), normals=np.zeros((num_pts, 3)))
 

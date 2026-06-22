@@ -1,0 +1,9 @@
+model_name = Cube
+output_dir = ./output
+dataset_type = blender
+data_dir = ./data/Cube
+reflection_dir = ./reflection/Cube
+ckpt_dir = ./ckpts
+ckpt_name = Cube
+white_background = True
+lrate = 0.02
