@@ -115,3 +115,16 @@ python AUROC_TEST.py --obj <class_name>
 ```
 
 Results are saved to `./AD_result`.
+
+## Tips & Troubleshooting
+
+**Adjusting Gaussian Splat Initialization:**
+During the Pose Estimation step, depending on your dataset, you may need to adjust the scale of the initial points of the Gaussian splat.
+
+You can modify the scale and center in `scene/dataset_readers.py` within either the `readMADInfo` or `readNerfSyntheticInfo` functions:
+
+```python
+# Adjust the scale (2.6) and center offset (-1.3) as needed for your scene
+xyz = np.random.random((num_pts, 3)) * 2.6 - 1.3 
+
+```
